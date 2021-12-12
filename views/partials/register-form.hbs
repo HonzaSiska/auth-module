@@ -1,0 +1,38 @@
+<label class="mb-1 " for="username-register">Uživatelské jméno</label>
+<br>
+<input class="form-control mb-2" class="3" type="text" name="username" id="username-register" maxlength="20" value="{{this.uName}}" >
+
+
+<label class="  mb-1" for="firstname-register">Jméno</label>
+<br>
+<input class="form-control mb-2" class="3" type="text" name="firstname" id="firstname-register" maxlength="20" value="{{this.fName}}" >
+
+
+
+<label class="mb-1" for="lastname-register">Přijmení</label>
+<input  class="form-control mb-2" class="3" type="text" name="lastname" id="lastname-register" maxlength="20" value="{{this.lName}}" >
+
+
+<label class="mb-1" for="email-register">Email</label>
+<br>
+<input class=" form-control mb-2"  type="email" name="email" id="email-register" maxlength="35" value="{{this.userEmail}}">
+
+{{#if hidePassword}}
+    <a href="/user/changepassword/{{userId}}" class="btn btn-warning w-100 mb-2">Zmenit Heslo</a>
+    
+{{else}}
+    <label class="mb-1" for="password-register">Heslo</label>
+    <br>
+    <input class="form-control mb-2"   type="password" name="password" id="password-register" minlength="7" maxlength="35" value="{{this.password}}">
+{{/if}}
+
+
+
+
+{{!-- <label for="avatar-register">Nahrej profilovou fotku</label>
+<br>
+<input type="file" name="avatar" id="avatar-register"  accept="image/png, image/jpeg">
+<br> --}}
+
+      
+        

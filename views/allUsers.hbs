@@ -1,0 +1,48 @@
+<div class="dash-nav-wrapper">
+    {{>dashboardNav}}
+</div>
+
+<h1>Uživatele</h1>
+<div>
+  <form id="user-search-form" method="GET" action="/user/all">
+    <input name="search" class="p-1" type="text" id="user-search-box">
+    <input  id="search-user-btn" type="submit" value="Hledat" class="mb-1 btn btn-primary">
+  </form>
+  
+</div>
+
+<div class="error-box">
+    {{>formError}}
+</div>
+
+<div id="users-table" class="table-responsive">
+
+  <table  class="table table-sm">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Uživatel</th>
+        <th scope="col">Jméno</th>
+        <th scope="col">Přijmení</th>
+        <th scope="col">Email</th>
+        <th scope="col">Role</th>
+        <th scope="col">Členem od</th>
+        <th scope="col">buttons</th>
+      </tr>
+    </thead>
+
+    <tbody class="table-striped">    
+      {{{users}}}
+        
+    </tbody>
+
+  </table>    
+
+</div>
+
+
+<div>
+  <span>{{{prevPage}}}</span>
+  <span>{{{nextPage}}}</span>
+
+</div>

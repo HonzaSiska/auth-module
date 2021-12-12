@@ -1,0 +1,19 @@
+<h1>Potvrdit vymazání uživatele <span class="text-primary">{{usernameToBeDeleted}}</span></h1>
+
+<div class="shadow form-container card p-3">  
+
+    <a href="/user/delete?id={{idToBeDeleted}}" class="btn btn-success m-1 ">Potvrzuji</a>
+
+    
+
+    {{#if deletedBySameUser}}
+
+    <a href="/user/{{idToBeDeleted}}" class="btn btn-primary m-1" >Zrušit</a>
+
+    {{else}}
+
+    <a href="/user/all" class="btn btn-primary m-1" >Zrušit</a>
+
+    {{/if}}
+
+</div>

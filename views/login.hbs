@@ -1,0 +1,22 @@
+<div class="error-box">
+    <div class="error-box">
+    <h4>Přihlášení uživatele</h4>
+    
+    {{>formError}}
+</div>
+    
+
+
+<div class="shadow form-container card p-3">
+    <form  method="POST"   action="/user/login" id="form-register">
+        {{>login-form}}
+
+    <div class="submit-btn-wrapper">
+        <input class="btn btn-primary" type="submit" name="submit-register" id="submit-register" value="Odeslat" form="form-register" >
+        <a class="badge-pill badge-light ml-5" href="/user/registration">Zaregistruj se</a>
+    </div>    
+    
+
+    </form>
+    
+</div>

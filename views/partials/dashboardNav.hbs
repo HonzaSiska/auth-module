@@ -1,0 +1,9 @@
+<div class="dash-nav">
+    <ul>
+        <li><a href="/user/{{userId}}">Profil</a></li> 
+        {{#if isAdmin }}
+            <li><a href ="/user/all">Uživatelé</a></li>
+            <li>Articles</li>
+        {{/if}}    
+    </ul>
+</div>

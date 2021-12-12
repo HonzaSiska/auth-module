@@ -1,0 +1,70 @@
+
+  {{!-- LEFT --}}
+ 
+<div id="nav-left">
+  <nav class="menu" id="menu">
+    <img id="x-close-nav" src="/open-iconic-master/svg/x.svg" alt="menu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+  </nav>
+</div> 
+
+
+
+{{!-- RIGHT --}}
+
+<div id="nav-right">
+  <div id="hamburger-menu-wrapper">
+    <img id="hamburger-menu" src="/open-iconic-master/svg/menu.svg" alt="menu">
+  </div>
+  <div id="nav-login-section">
+    {{#if userId}}
+    {{!-- LOGOUT BUTTON SHOWS WHEN LOGGED IN--}}
+    <div>
+      <form action='/user/logout' method="post">
+      <button id="logout-btn">Logout</button>
+      </form>
+    </div>
+    <div >
+        {{!-- AVATAR SHOWS WHEN LOGGED IN AND IMAGE EXISTS OTHERWISE USERNAME DISPLAYS --}}
+        <div> 
+          {{#if avatar}}
+          <div id="nav-avatar">
+            <a href="/user/{{userId}}"><img src="/uploads/avatar/{{avatar}}" alt="profile image"></a>
+          </div>
+          
+          {{else}}
+          <div>
+            <a href="/user/{{userId}}">{{username}}</a>
+          </div>
+          
+          {{/if}}  
+        </div> 
+        
+        
+          {{else}}
+          
+            {{#if hideLoginBtn}}
+
+            {{else}}
+            <div>
+              <a href = "/user/login">Login</a>
+            </div>
+              
+            {{/if}}
+          {{/if}}
+        
+
+    </div>
+  </div>
+  
+
+</div>
+  
+  
+    
+    
